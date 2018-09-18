@@ -18,5 +18,9 @@
         "name": "Sliding Text Improved"
       }
     }
+  },
+  "devDependencies": {
+    "@fitbit/sdk": "~1.0.0",
+    "@fitbit/sdk-cli": "^1.0.0"
   }
 }

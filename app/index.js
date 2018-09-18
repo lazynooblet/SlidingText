@@ -1,10 +1,10 @@
-import myClock from 'myClock';
-import DateUpdater from 'date';
-import BatteryUpdater from 'battery';
-import HealthMonitor from 'activity';
-import Animator from 'animator';
-import SettingsManager from 'userSettings';
-import DomHelper from 'dom';
+import myClock from './myClock';
+import DateUpdater from './date';
+import BatteryUpdater from './battery';
+import HealthMonitor from './activity';
+import Animator from './animator';
+import SettingsManager from './userSettings';
+import DomHelper from './dom';
 
 import NumberToText from '../common/numberToText';
 import * as util from "../common/utils";
