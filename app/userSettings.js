@@ -6,6 +6,8 @@ import fs from 'fs';
 export default class SettingsManager {
     constructor(domHelper) {
         this.domHelper = domHelper;
+        
+        this.registerCompanionLink();
       
         this.getSavedSettings();
         this.setSettings();
@@ -15,12 +17,6 @@ export default class SettingsManager {
         messaging.peerSocket.onmessage = (event) => {
           this.handleMessage(event);
         };
-        // Force settings to be sent on init
-        messaging.peerSocket.addEventListener('open', () => {
-            messaging.peerSocket.send({
-                key: 'INIT'
-            });
-        });
     }
   
     getSavedSettings() {
