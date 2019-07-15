@@ -1,12 +1,12 @@
 import document from "document";
 import {preferences} from "user-settings";
-import messaging from 'messaging';
+import * as messaging from 'messaging';
 import fs from 'fs';
 
 export default class SettingsManager {
     constructor(domHelper) {
         this.domHelper = domHelper;
-        
+      
         this.registerCompanionLink();
       
         this.getSavedSettings();
@@ -17,6 +17,12 @@ export default class SettingsManager {
         messaging.peerSocket.onmessage = (event) => {
           this.handleMessage(event);
         };
+        // Force settings to be sent on init
+        messaging.peerSocket.addEventListener('open', () => {
+            messaging.peerSocket.send({
+                key: 'INIT'
+            });
+        });
     }
   
     getSavedSettings() {
@@ -31,8 +37,8 @@ export default class SettingsManager {
         this.settings = {
             fgColor: this.settings.fgColor || '#FFFFFF',
             bgColor: this.settings.bgColor || '#000000',
-            showBattery: this.settings.showBattery || true,
-            dimBattery: this.settings.dimBattery || true,
+            showBattery: typeof this.settings.showBattery == 'boolean' ? this.settings.showBattery : true,
+            dimBattery: typeof this.settings.dimBattery == 'boolean' ? this.settings.dimBattery : true,
             animationEnabled: true
         };
     }

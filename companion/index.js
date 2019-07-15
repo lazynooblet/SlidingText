@@ -14,7 +14,7 @@ settingsStorage.onchange = (evt) => {
 
 const sendValue = (key, val) => {
   console.info(key, val);
-  if (val) {
+  if (val !== null) {
     sendSettingData({
       key: key,
       value: JSON.parse(val)
@@ -27,8 +27,6 @@ const updateAll = () => {
   sendValue(KEY_FOREGROUND, settingsStorage.getItem(KEY_FOREGROUND));
   sendValue(KEY_SHOW_BATTERY, settingsStorage.getItem(KEY_SHOW_BATTERY));
   sendValue(KEY_DIM_BATTERY, settingsStorage.getItem(KEY_DIM_BATTERY));
-  
-  messaging.peerSocket.onopen = null;
 }
 
 const sendSettingData = (data) => {
