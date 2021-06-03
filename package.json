@@ -1,8 +1,11 @@
 {
+  "devDependencies": {
+    "@fitbit/sdk": "~5.0.0"
+  },
   "fitbit": {
-    "appUUID": "91b8e628-947d-4509-ad00-4d69c1d6e536",
+    "appUUID": "457c0598-4302-41b6-b232-ddb0a56bd495",
     "appType": "clockface",
-    "appDisplayName": "Sliding Text Improved",
+    "appDisplayName": "Sliding Text Improved SDK5",
     "iconFile": "resources/icon.png",
     "wipeColor": "#f44336",
     "requestedPermissions": [
@@ -10,18 +13,14 @@
       "access_heart_rate"
     ],
     "buildTargets": [
-      "higgs",
-      "meson",
-      "gemini"
+      "atlas",
+      "vulcan"
     ],
     "i18n": {
-      "en": {
-        "name": "Sliding Text Improved"
+      "en-US": {
+        "name": "Sliding Text Improved SDK5"
       }
     },
     "defaultLanguage": "en-US"
-  },
-  "devDependencies": {
-    "@fitbit/sdk": "~3.1.0"
   }
 }
