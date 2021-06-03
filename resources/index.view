@@ -9,5 +9,5 @@
   
   <text id="dayofweek" class="aux-data"></text>
   <text id="date" class="aux-data"></text>
-  <rect id="batteryLevel" x="100%" y="100%-2" height="2" width="0" fill="white" fill="white" />
+  <rect id="batteryLevel" x="100%" y="93%-2" height="2" width="0" fill="white" fill="white" />
 </svg>
