@@ -28,8 +28,10 @@ export default class BatteryUtil {
     }
   
     setBatteryLevel(level) {
-        this.domHelper.batteryBar.width = Math.ceil(this.domHelper.root.width * (1 - (level / 100)));
-        this.domHelper.batteryBar.x = Math.ceil(this.domHelper.root.width * (level / 100));
+        const batteryBarOffset = 35
+        const batteryBarWidth = this.domHelper.root.width - (batteryBarOffset *2)
+        this.domHelper.batteryBar.width = Math.ceil(batteryBarWidth * (1 - (level / 100)));
+        this.domHelper.batteryBar.x = Math.ceil(batteryBarWidth * (level / 100) + batteryBarOffset);
     }
   
     hideBattery() {
