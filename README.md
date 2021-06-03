@@ -1,6 +1,6 @@
 # Sliding Text Improved+
 
-Hacked version of Sliding Text by Brian Bolton to work on Versa3/Sense (Fitbit SDK v5)
+Updated version of Sliding Text by Brian Bolton to work on Versa3/Sense (Fitbit SDK v5)
 
 Versa 3 / Sense version available at: https://gallery.fitbit.com/details/2bc04c28-39e0-4f59-901d-bae34cfb98e1
 
