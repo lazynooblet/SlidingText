@@ -1,6 +1,8 @@
-# SlidingText SDK5
+# Sliding Text Improved+
 
-Versa 3 version available at: https://gallery.fitbit.com/details/457c0598-4302-41b6-b232-ddb0a56bd495
+Hacked version of Sliding Text by Brian Bolton to work on Versa3/Sense (Fitbit SDK v5)
+
+Versa 3 / Sense version available at: https://gallery.fitbit.com/details/2bc04c28-39e0-4f59-901d-bae34cfb98e1
 
 # Original readme
 This is a port of my pebble (RIP) watchface of the same name.
